@@ -16,7 +16,7 @@ public class ContactDto {
     @Size(max = 255)
     private String lastName;
 
-    @Embedded // Embarquee
+    @Embedded
     private ContactInfo info;
 
     public ContactDto() {

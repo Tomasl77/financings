@@ -32,19 +32,19 @@ public class ClientDto {
 	this.name = name;
     }
 
-    public LegalForm getLegalForm() {
-	return legalForm;
-    }
-
-    public void setLegalForm(LegalForm legalForm) {
-	this.legalForm = legalForm;
-    }
-
     public Long getContactId() {
 	return contactId;
     }
 
     public void setContactId(Long contactId) {
 	this.contactId = contactId;
+    }
+
+    public LegalForm getLegalForm() {
+	return legalForm;
+    }
+
+    public void setLegalForm(LegalForm legalForm) {
+	this.legalForm = legalForm;
     }
 }
