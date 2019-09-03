@@ -39,7 +39,7 @@ public class Financing {
     @JoinColumn(nullable = false)
     private Client client;
 
-    @Column(columnDefinition = "boolean default false")
+    @Column(columnDefinition = "boolean default false") //
     private Boolean validated;
 
     public Financing() {

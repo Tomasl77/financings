@@ -19,7 +19,7 @@ import fr.formation.financings.services.FinancingService;
 @RequestMapping("/financings")
 public class FinancingController {
 
-    @Autowired // = @Inject
+    @Autowired
     private FinancingService service;
 
     @PostMapping

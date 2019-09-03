@@ -38,7 +38,7 @@ public class FinancingDto {
     @NotNull
     private Long clientId;
 
-    @NotNull
+    @NotNull //
     private Boolean validated;
 
     public FinancingDto() {
