@@ -4,8 +4,6 @@ import javax.persistence.Embedded;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
-import fr.formation.financings.entities.ContactInfo;
-
 public class ContactDto {
 
     @NotBlank
@@ -17,7 +15,7 @@ public class ContactDto {
     private String lastName;
 
     @Embedded
-    private ContactInfo info;
+    private ContactInfoDto info;
 
     public ContactDto() {
     }
@@ -38,11 +36,11 @@ public class ContactDto {
 	this.lastName = lastName;
     }
 
-    public ContactInfo getInfo() {
+    public ContactInfoDto getInfo() {
 	return info;
     }
 
-    public void setInfo(ContactInfo info) {
+    public void setInfo(ContactInfoDto info) {
 	this.info = info;
     }
 }
