@@ -39,7 +39,8 @@ public class ClientController {
     }
 
     @PutMapping("/{id}")
-    protected void updateOne(@RequestBody @PathVariable("id") Long id) {
-	// Do the put client
+    protected void updateOne(@PathVariable("id") Long id,
+	    @Valid @RequestBody ClientDto dto) {
+	service.update(id, dto);
     }
 }
