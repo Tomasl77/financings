@@ -24,6 +24,10 @@ public class ClientServiceImpl implements ClientService {
     @Override
     public void create(ClientDto dto) {
 	Client client = new Client();
+	extracted(dto, client);
+    }
+
+    private void extracted(ClientDto dto, Client client) {
 	client.setLegalForm(dto.getLegalForm());
 	client.setName(dto.getName());
 	if (dto.getContactId() != null) {
@@ -44,7 +48,8 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public void update(Long id) {
-	// TODO Auto-generated method stub
+    public void update(Long id, ClientDto dto) {
+	Client client = clientRepo.findById(id).get();
+	extracted(dto, client);
     }
 }
