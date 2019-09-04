@@ -35,13 +35,12 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public void delete(Long id) {
-	// TODO Auto-generated method stub
+	clientRepo.deleteById(id);
     }
 
     @Override
     public Client getOne(Long id) {
-	// TODO Auto-generated method stub
-	return null;
+	return clientRepo.findById(id).get();
     }
 
     @Override
