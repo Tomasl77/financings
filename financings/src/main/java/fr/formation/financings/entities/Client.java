@@ -20,11 +20,7 @@ public class Client {
     @Column(length = 4, nullable = false)
     private LegalForm legalForm;
 
-    // @OneToMany // One Client to Many Contact
-    // @OneToMany: Many Contact to One Client
-    @ManyToOne // One Client to One Contact
-    // Many Client to One Contact
-    // @ManyToOne: One Contact to Many Client
+    @ManyToOne
     private Contact contact;
 
     public Client() {

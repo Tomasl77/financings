@@ -18,7 +18,6 @@ public class ClientDto {
     @Enumerated(EnumType.STRING)
     private LegalForm legalForm;
 
-    @NotNull
     private Long contactId;
 
     public ClientDto() {
