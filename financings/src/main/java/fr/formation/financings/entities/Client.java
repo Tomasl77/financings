@@ -2,6 +2,8 @@ package fr.formation.financings.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -17,6 +19,7 @@ public class Client {
     @Column(length = 255, nullable = false)
     private String name;
 
+    @Enumerated(EnumType.STRING)
     @Column(length = 4, nullable = false)
     private LegalForm legalForm;
 

@@ -38,7 +38,7 @@ public class FinancingController {
 	return service.getOne(id);
     }
 
-    @PatchMapping("/{id}/validate")
+    @PatchMapping("/{id}/validated")
     protected void validate(@PathVariable("id") Long id) {
 	service.validate(id);
     }

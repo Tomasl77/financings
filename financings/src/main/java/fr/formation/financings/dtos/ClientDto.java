@@ -1,7 +1,5 @@
 package fr.formation.financings.dtos;
 
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -15,7 +13,6 @@ public class ClientDto {
     private String name;
 
     @NotNull
-    @Enumerated(EnumType.STRING)
     private LegalForm legalForm;
 
     private Long contactId;
