@@ -1,7 +1,6 @@
 package fr.formation.financings.entities;
 
 import javax.persistence.Column;
-import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,8 +19,14 @@ public class Contact {
     @Column(length = 255, nullable = false)
     private String lastName;
 
-    @Embedded // Embarquee
-    private ContactInfo info;
+    @Column(length = 255, nullable = false)
+    private String email;
+
+    @Column(length = 20, nullable = false)
+    private String phone;
+
+    @Column(length = 20, nullable = false)
+    private String mobile;
 
     public Contact() {
 	//
@@ -51,11 +56,27 @@ public class Contact {
 	this.lastName = lastName;
     }
 
-    public ContactInfo getInfo() {
-	return info;
+    public String getEmail() {
+	return email;
     }
 
-    public void setInfo(ContactInfo info) {
-	this.info = info;
+    public void setEmail(String email) {
+	this.email = email;
+    }
+
+    public String getPhone() {
+	return phone;
+    }
+
+    public void setPhone(String phone) {
+	this.phone = phone;
+    }
+
+    public String getMobile() {
+	return mobile;
+    }
+
+    public void setMobile(String mobile) {
+	this.mobile = mobile;
     }
 }
