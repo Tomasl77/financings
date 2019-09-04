@@ -1,7 +1,5 @@
 package fr.formation.financings.dtos;
 
-import fr.formation.financings.entities.Contact;
-
 public interface FinancingViewDto {
 
     String getReference();
@@ -12,7 +10,7 @@ public interface FinancingViewDto {
 
     String getClientName();
 
-    Contact getLastName();
+    String getClientContactLastName();
 
-    Contact getFirstName();
+    String getClientContactFirstName();
 }
