@@ -1,8 +1,11 @@
 package fr.formation.financings.services;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import fr.formation.financings.dtos.ClientDto;
+import fr.formation.financings.dtos.ClientViewDto;
 import fr.formation.financings.entities.Client;
 import fr.formation.financings.entities.Contact;
 import fr.formation.financings.repositories.ClientRepository;
@@ -43,13 +46,18 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public Client getOne(Long id) {
-	return clientRepo.findById(id).get();
+    public ClientViewDto getOne(Long id) {
+	return clientRepo.getById(id);
     }
 
     @Override
     public void update(Long id, ClientDto dto) {
 	Client client = clientRepo.findById(id).get();
 	extracted(dto, client);
+    }
+
+    @Override
+    public List<ClientViewDto> getAll() {
+	return clientRepo.getAllProjectedBy();
     }
 }
