@@ -33,10 +33,11 @@ public class ClientServiceImpl implements ClientService {
     private void extracted(ClientDto dto, Client client) {
 	client.setLegalForm(dto.getLegalForm());
 	client.setName(dto.getName());
+	Contact contact = null;
 	if (dto.getContactId() != null) {
-	    Contact contact = contactRepo.getOne(dto.getContactId());
-	    client.setContact(contact);
+	    contact = contactRepo.getOne(dto.getContactId());
 	}
+	client.setContact(contact);
 	clientRepo.save(client);
     }
 
